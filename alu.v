@@ -22,14 +22,8 @@ begin
             alu_ans = a - b;
             if (a < b) carry = 1;
         end
-        // LSL / LSR
-        2'b10:
-        // b[0] defines LSL or LSR
-        // b[4:1] corresponds to shift
-        case (b[0])
-            1'b0: alu_ans = a << (b[4:1]);
-            1'b1: alu_ans = a >> (b[4:1]);
-        endcase
+        // CMP
+        2'b10: alu_ans = (a < b) ? 16'b1 : 16'b0;
         // NAND (Universal Gate)
         2'b11: alu_ans = ~(a & b);
         default: alu_ans = 16'd0;

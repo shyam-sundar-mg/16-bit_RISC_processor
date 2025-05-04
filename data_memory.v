@@ -12,10 +12,11 @@ module data_memory(
 reg [15:0] mem [0:255];
 initial
     begin
-        mem[0] = 16'd2; // #00h
-        mem[1] = 16'd3; // #01h
-        mem[2] = 16'd10; // #02h
-        mem[3] = 16'd15; // #03h       
+        $readmemh("C:/Users/shyam/simple_processor/simple_processor.srcs/sources_1/new/data_mem.txt", mem);
+//        mem[0] = 16'd2; // #00h
+//        mem[1] = 16'd3; // #01h
+//        mem[2] = 16'd10; // #02h
+//        mem[3] = 16'd15; // #03h       
     end
 always @(posedge clk)
 begin

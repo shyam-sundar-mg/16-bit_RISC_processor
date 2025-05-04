@@ -14,7 +14,7 @@ module processor_tb;
         $display("PROCESSOR TESTBENCH");
         clk = 0;
         reset = 1;
-        #20;
+        #100;
         reset = 0;
         #200;
         $finish;
@@ -22,25 +22,15 @@ module processor_tb;
 
     // Optionally monitor key values
     initial begin
-        $monitor("Time=%0d|PC=%d|R0=%d|R1=%d|R2=%d|R3=%d|Wr_addr=%d|Mem[0]=%d|Mem[1]=%d|Mem[2]=%d|Mem[3]=%d",
+        $monitor("Time=%0d|PC=%d|R0=%d|R1=%d|R2=%d|R3=%d|",
+//        Mem[0]=%b|Mem[1]=%b|Mem[2]=%b|Mem[3]=%b
 //        |Read_en=%d|addr=%d|rd_data=%d|wr_data=%d|alu_ans=%d",
                  $time,
                  uut.pc,
                  uut.rf.registers[0],
                  uut.rf.registers[1],
                  uut.rf.registers[2],
-                 uut.rf.registers[3],
-                 uut.rf.wr_addr,
-                 uut.dmem.mem[0],
-                 uut.dmem.mem[1],
-                 uut.dmem.mem[2],
-                 uut.dmem.mem[3]
-//                 ,
-//                 uut.dmem.mem_rd_en,
-//                 uut.dmem.addr,
-//                 uut.dmem.read_data,
-//                 uut.write_data,
-//                 uut.alu_inst.alu_ans
+                 uut.rf.registers[3]
                  );
     end
 
