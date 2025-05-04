@@ -21,6 +21,7 @@ Instructions for Arithmetic Ops:
 | opcode         | dest_reg      | src1_reg       | src2_reg      |
 | :-------------:|:-------------:| :-------------:|:-------------:| 
 |`bits 15 -> 12` | `bits 11 -> 8`| `bits 7 -> 4`  | `bits 3 -> 0` |
+|-----------------------------------------------------------------|
 Instructions for Memory Access:
 | opcode         | src/dest_reg  | access_address                 |
 | :-------------:|:-------------:| :-----------------------------:| 
