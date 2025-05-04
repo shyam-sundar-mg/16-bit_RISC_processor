@@ -1,8 +1,6 @@
 # 16-bit RISC Processor
 > A 16-bit RISC processor implemented in Xilinx Vivado using Verilog. 
 
-The processor is capable of fetching and executing a set of 16-bit machine instructions. 
-
 #### Data Memory
 * 256 memory locations with 16-bit data
 
