@@ -22,6 +22,7 @@ Instructions for Memory Access:
 | :-------------:|:-------------:| :-----------------------------:| 
 | `bits 15 -> 12`| `bits 11 -> 8`|        `bits 7 -> 0`           |
 
+#### Instruction Set
 | Name          | Opcode    | 
 | ------------- |:---------:| 
 | add           | 0000      | 
